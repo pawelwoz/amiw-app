@@ -1,0 +1,16 @@
+<table class="table">
+
+    <th>Kod waluty</th>
+    <th>Średni kurs</th>
+    <th>Data</th>
+
+    <tbody *ngFor="let rate of rates">
+        <td>{{rate.currencyCode}}</td>
+        <td>{{rate.midRate}}</td>
+        <td>{{rate.effectiveDate}}</td>
+    </tbody>
+    
+    <tbody *ngIf="rates && rates.length <= 0">
+        <td colspan="3">Brak wyników</td>
+    </tbody>
+</table>
